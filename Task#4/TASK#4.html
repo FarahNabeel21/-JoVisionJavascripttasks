@@ -1,0 +1,72 @@
+<html>
+    <head>
+        
+        <title>
+        TASK#4 Print The Summation  
+        </title>
+        <style>
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #button1 {
+            background-color: #d0261a;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        #button1:hover {
+            background-color: #45a049;
+        }
+
+        #space-Text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        </style>    
+        <script>
+function ClickButton()
+{
+let buttonId=document.getElementById('button1');
+buttonId.addEventListener("click",printsum,false);    
+}
+function printsum()
+{    
+const array=new Array(101);
+let sum=0;
+for(let i=0;i<array.length;i++)
+{
+array[i]=i;
+sum+=array[i];
+}    
+let numberId=document.getElementById("space-number");
+numberId.innerHTML="<br>"+"SUM = "+sum+"<br>";
+}
+window.addEventListener("load",ClickButton,false);
+        </script>    
+
+    </head>
+    
+
+    <body>
+<input id="button1" type="button" value="Click Me">
+<div id="space-number"></div>
+
+
+    </body>
+
+
+
+</html>
