@@ -1,0 +1,65 @@
+<html>
+    <head>
+        
+        <title>
+        TASK#2 Print Hello world 
+        </title>
+        <style>
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #button1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        #button1:hover {
+            background-color: #45a049;
+        }
+
+        #space-Text {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        </style>    
+        <script>
+function ClickButton()
+{
+let buttonId=document.getElementById('button1');
+buttonId.addEventListener("click",print,false);    
+}
+function print()
+{
+let textId=document.getElementById("space-Text");
+textId.innerHTML="<br>"+"Hello World"+"<br>";
+}
+window.addEventListener("load",ClickButton,false);
+        </script>    
+
+    </head>
+    
+
+    <body>
+<input id="button1" type="button" value="Click Me">
+<div id="space-Text"></div>
+
+
+    </body>
+
+
+
+</html>
