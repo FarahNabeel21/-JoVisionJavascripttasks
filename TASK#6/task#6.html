@@ -1,0 +1,176 @@
+<html>
+    <head>
+        
+        <title>
+        TASK#6 
+        </title>
+        <style>
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        input {
+            background-color: #1ad020;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        input:hover {
+            background-color: #45a049;
+        }
+
+        #space-Text{
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        </style>    
+        <script>
+            
+function printnum1()
+{    
+var numbers='[ ';
+const array=new Array(101);
+for(let i=0;i<array.length;i++)
+{
+array[i]=i;
+if(array[i]%3!=0)
+{
+array[i]=i;
+numbers+=array[i]+'  ';
+if(array[i]==100)
+break;
+numbers +=','
+}
+}  
+//let numberId=document.getElementById("space-Text");    
+console.log(numbers+']');
+}
+
+function printnum2()
+{
+    var k="[";
+    const array=[];
+    for(let i=0;i<=100;i++)
+{
+    array[i]=i;
+    k+='  '+array[i]+',' 
+}
+for(let i=100;i<=150;i++)
+{
+array[i]=i;
+k+=' '+array[i];
+if(array[i]==150)
+break;
+k+=',' 
+
+}
+console.log(' '+k+'] ') ;
+
+}
+
+function printnum3()
+{
+   let k=" [" ;
+   let sum=0;
+let array=[];
+for(let i=0;i<=100;i++)
+{
+array[i]=i;
+sum=array[i]+3;
+k+='  '+sum+' , ';
+}    
+console.log(k);
+}
+function printnum4()
+{
+let array=[];
+let k=' ';
+
+for(let i=0;i<=100;i++)
+{
+array[i]=i;
+if(array[i]==20)
+{
+for(let i=20;i<=40;i++)
+{
+array[i]=i;
+k+='  '+array[i]+',';
+
+}
+
+console.log(k);
+}
+ 
+
+
+}
+
+
+
+
+}
+
+
+
+    function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+function printnum5()
+{
+    let k=' '; 
+    let arr = [];
+    for(let i=0;i<=100;i++){
+    arr[i]=i;
+
+    }
+//shuffleArray(arr);
+console.log(shuffleArray(arr))
+
+  
+
+}
+
+
+
+
+
+
+
+        </script>    
+
+    </head>
+    
+
+    <body>
+<input id="button1" type="button" value="Click Me 1"  onclick="printnum1()">
+<input id="button2" type="button" value="Click Me 2" onclick="printnum2()">
+<input id="button3" type="button" value="Click Me 3 " onclick="printnum3()">
+<input id="button4" type="button" value="Click Me 4" onclick="printnum4()">
+<input id="button5" type="button" value="Click Me 5 " onclick="printnum5()">
+<div id="space-Text"></div>
+<div id="s"></div>
+
+
+
+
+    </body>
+
+
+
+</html>
