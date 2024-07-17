@@ -13,29 +13,15 @@
             
             
             <script>
-function start()
-                {
-                document.getElementById('button1').addEventListener('click',response,false)  ;
-                }
-
-function response()
-{
-let fetchRes = fetch(
+                let fetchRes = fetch(
 "https://api.ipify.org/");
 
 // FetchRes is the promise to resolve
 // it by using.then() method
 fetchRes.then(res =>
-res.toString()).then(d => {
+res.text().toString).then(d => {
     console.log(d)
-});
-
-fetchRes.then(res=>res.text()).then(d=>{console.log(d)});
-  }
-
-
-window.addEventListener('load',start,false);
-
+})
             </script>
             
             
