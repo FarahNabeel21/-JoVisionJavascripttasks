@@ -21,16 +21,17 @@ function start()
 function response()
 {
 let fetchRes = fetch(
-"https://api.ipify.org/");
+"https://api.ipify.org?format=json");
 
 // FetchRes is the promise to resolve
 // it by using.then() method
 fetchRes.then(res =>
-res.toString()).then(d => {
-    console.log(d)
+res.json()).then(data => {
+                    // Print the response in the console
+                    console.log('Response:', data);
 });
 
-fetchRes.then(res=>res.text()).then(d=>{console.log(d)});
+//fetchRes.then(res=>res.text()).then(d=>{console.log(d)});
   }
 
 
