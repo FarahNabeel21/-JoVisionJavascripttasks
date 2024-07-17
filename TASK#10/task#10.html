@@ -1,61 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-      <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get IP Example</title>
+    <script>
+        function start() {
+            document.getElementById('getIpButton').addEventListener('click', getIpAddress, false);
+        }
 
-
-        <title>
-            task#9
-            </title>
-
-            
-            
-            <script>
-function start()
-                {
-                document.getElementById('button1').addEventListener('click',response,false)  ;
-                }
-
-function response()
-{
-let fetchRes = fetch(
-"https://api.ipify.org/");
-
-// FetchRes is the promise to resolve
-// it by using.then() method
-fetchRes.then(res =>
-res.json()).then(d => {
-    console.log(d)
-});
-
-fetchRes.then(res=>res.text()).then(d=>{console.log(d)});
-  }
-
-
-window.addEventListener('load',start,false);
-
-            </script>
-            
-            
+        function getIpAddress() {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('getIpButton').textContent = `Your IP: ${data.ip}`;
+                })
                 
-        </head>
+        }
 
+        window.addEventListener('load', start, false);
+    </script>
+</head>
 
-
-
-      
-            <body>
-                <input id="button1" type="button" value="Git ip">
-                <div id="space"></div>
-
-                
-        </body>
-       
-            
-
-
-
+<body>
+    <button id="getIpButton">Get IP</button>
+</body>
 
 </html>
