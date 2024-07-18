@@ -10,7 +10,7 @@
             document.getElementById('button1').addEventListener('click', function () {
                 fetch("https://api.ipify.org?format=json")
                     .then(response => response.json())
-                    .then(data => console.log('Response:', data))
+                    .then(d=> console.log('Response:', d))
                     .catch(error => console.error('Error:', error));
             });
         });
