@@ -7,11 +7,11 @@
     <title>Get IP Address</title>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('get-ip-button').addEventListener('click', function () {
+            document.getElementById('button1').addEventListener('click', function () {
                 fetch("https://api.ipify.org?format=json")
                     .then(response => response.json())
                     .then(data => {
-                        document.getElementById('get-ip-button').value = data.toString();
+                        document.getElementById('button1').value = data.ip;
                     })
                     .catch(error => console.error('Error:', error));
             });
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <input id="get-ip-button" type="button" value="Get IP">
+    <input id="button1" type="button" value="Get IP" onclick="">
 </body>
 
 </html>
