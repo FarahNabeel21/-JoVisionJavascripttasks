@@ -4,29 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get IP Example</title>
+    <title>Get IP Address</title>
     <script>
-        function start() {
-            document.getElementById('getIpButton').addEventListener('click', getIpAddress, false);
-        }
-
-        function getIpAddress() {
-            fetch('https://api.ipify.org?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('getIpButton').textContent = `Your IP: ${data.ip}`;
-                })
-            }
-
-        window.addEventListener('load', start, false);
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('get-ip-button').addEventListener('click', function () {
+                fetch("https://api.ipify.org?format=json")
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('get-ip-button').value = data.toString();
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+        });
     </script>
 </head>
 
 <body>
-    <button id="getIpButton">Get IP</button>
-
-
-
+    <input id="get-ip-button" type="button" value="Get IP">
 </body>
 
 </html>
