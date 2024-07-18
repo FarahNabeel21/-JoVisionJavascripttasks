@@ -10,13 +10,24 @@
             document.getElementById('getIpButton').addEventListener('click', getIpAddress, false);
         }
 
-        function getIpAddress() {
+        function getIpAddress() 
+        {
+            try{
             fetch('https://api.ipify.org?format=json')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('getIpButton').textContent = `Your IP: ${data.ip}`;
                 })
             }
+        
+            catch()
+            {
+
+
+            }
+        
+        }
+    
 
         window.addEventListener('load', start, false);
     </script>
