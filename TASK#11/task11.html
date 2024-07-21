@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get IP Address</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('button1').addEventListener('click', function () {
+                fetch("https://api.ipify.orgformat=json")
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('button1').value = data.ip;
+                    })
+
+                    alert('Error ');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input id="button1" type="button" value="Get IP" onclick="">
+</body>
+
+</html>
