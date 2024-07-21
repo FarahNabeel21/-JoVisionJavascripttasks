@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task12
+
+    </title>
+    <script>
+    function SubmitButton() 
+     {
+
+const name=document.getElementById('name').value;
+const age=document.getElementById('age').value;
+const time=new Date().toLocaleString();
+const Data = {
+                nam: name,
+                age: age,
+                timestamp:time
+            };
+
+alert('{ name : ' + Data.name +'\n ' +' age : ' + Data.age+'\n' +'time:'+Data.timestamp+'}');
+
+    } 
+
+
+    </script>
+</head>
+
+<body>
+    <form >
+        <label></label>Name:</label>
+        <input id="name" type="text" placeholder="Name" required><br><br>
+        <label >Age:</label>
+        <input id="age" type="text" placeholder="Age" required><br><br>
+        <input type="submit" value="Submit" onclick="SubmitButton()">
+
+<div id="n"></div>
+
+
+    </form>
+
+
+  
+    </body>
+
+
+
+
+</html>
