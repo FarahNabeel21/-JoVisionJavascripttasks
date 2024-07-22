@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK13</title>
+
+<script>
+function request()
+{
+const name=document.getElementById('name').value;
+if(!name)
+{
+window.alert('please enter your name !');
+}
+
+fetch(`https://api.agify.io?name=${name}`)
+.then(response=>response.json())
+.then(data=>{ const { name, age } = data;
+alert(`Your name is: ${name}\nYour age is: ${age}`);
+})
+.catch(error=>{
+    console.error('error',error);
+alert('Failed to fetch age prediction');
+});
+
+
+
+}
+
+
+
+
+
+
+
+
+</script>    
+
+
+
+
+</head>
+<body>
+   
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Name">
+    <input type="submit"  id="Enter" onclick="request()">
+
+    <script>
+        
+    </script>
+</body>
+</html>
